@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saddam Alfarauq | Portofolio</title>
+    <meta name="description" content="Portfolio of Saddam Alfarauq, a Junior Web Developer specializing in JavaScript, Deep Learning, and WebGIS.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar glass">
+        <div class="logo">SA.</div>
+        <ul class="nav-links">
+            <li><a href="#home" data-i18n="nav_home">Home</a></li>
+            <li><a href="#about" data-i18n="nav_about">About</a></li>
+            <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+            <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="lang-toggle" class="icon-btn" aria-label="Toggle Language">ID</button>
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </button>
+            <a href="#contact" class="btn-contact" data-i18n="nav_contact">Contact Me</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="greeting" data-i18n="hero_greeting">Hello, I'm</p>
+            <h1 class="name">Saddam Alfarauq</h1>
+            <h2 class="title" data-i18n="hero_title">Web Developer & AI Enthusiast</h2>
+            <p class="summary" data-i18n="hero_summary">
+                Certified Junior Web Developer with a strong background in JavaScript and Deep Learning. 
+                Passionate about building scalable applications and intelligent WebGIS solutions.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary" data-i18n="hero_btn_work">View My Work</a>
+                <a href="#contact" class="btn-secondary" data-i18n="hero_btn_cv">Download CV</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="glow-orb"></div>
+            <!-- Profile Image -->
+            <div class="profile-image-container glass">
+                 <img src="/src/assets/3052_0 - Copy.jpg" alt="Saddam Alfarauq" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title" data-i18n="about_title">About Me</h2>
+        <div class="about-grid">
+            <div class="about-text glass">
+                <p data-i18n="about_p1">
+                    I am a final-year Information Technology student at Universitas Bosowa with a strong drive for learning. I bring a unique blend of front-end development and data science skills, specifically in implementing Deep Learning (CNN & Mask R-CNN) for geospatial data analysis.
+                </p>
+                <p data-i18n="about_p2">
+                    My leadership experience as the Head of Internal Affairs in my university's IT Student Association has equipped me with excellent communication and team management skills.
+                </p>
+            </div>
+            <div class="timeline glass">
+                <h3 data-i18n="about_timeline_title">Experience & Education</h3>
+                <div class="timeline-item">
+                    <h4>MATSC AirNav Makassar</h4>
+                    <p class="date" data-i18n="about_timeline_1_date">Intern - Engineering Division</p>
+                    <p data-i18n="about_timeline_1_desc">Preventive maintenance and troubleshooting of aviation communication tools.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 data-i18n="about_timeline_2_org">Institut Teknologi Bandung (ITB)</h4>
+                    <p class="date" data-i18n="about_timeline_2_date">Student Exchange Program</p>
+                    <p data-i18n="about_timeline_2_desc">Immersed in a highly competitive academic environment.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Universitas Bosowa</h4>
+                    <p class="date" data-i18n="about_timeline_3_date">B.S. Information Technology (Present)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2 class="section-title" data-i18n="skills_title">Technical Expertise</h2>
+        <div class="skills-container">
+            <div class="skill-category glass">
+                <h3 data-i18n="skills_cat1">Development</h3>
+                <ul>
+                    <li data-i18n="skills_cat1_1">JavaScript (Web & Mobile)</li>
+                    <li data-i18n="skills_cat1_2">HTML5 & CSS3</li>
+                    <li data-i18n="skills_cat1_3">Vite & Modern Tooling</li>
+                    <li data-i18n="skills_cat1_4">Git Version Control</li>
+                </ul>
+            </div>
+            <div class="skill-category glass">
+                <h3 data-i18n="skills_cat2">AI & Data</h3>
+                <ul>
+                    <li data-i18n="skills_cat2_1">Python</li>
+                    <li data-i18n="skills_cat2_2">Deep Learning</li>
+                    <li data-i18n="skills_cat2_3">CNN & Mask R-CNN</li>
+                    <li data-i18n="skills_cat2_4">WebGIS Integration</li>
+                </ul>
+            </div>
+            <div class="skill-category glass">
+                <h3 data-i18n="skills_cat3">Soft Skills</h3>
+                <ul>
+                    <li data-i18n="skills_cat3_1">Team Leadership</li>
+                    <li data-i18n="skills_cat3_2">Problem Solving</li>
+                    <li data-i18n="skills_cat3_3">Hardware Troubleshooting</li>
+                    <li data-i18n="skills_cat3_4">Project Management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title" data-i18n="projects_title">Featured Project</h2>
+        <div class="project-card glass">
+            <div class="project-info">
+                <h3 data-i18n="projects_p1_title">WebGIS Flood Detection System</h3>
+                <p class="tech-stack">JavaScript • Python • CNN • Mask R-CNN • WebGIS</p>
+                <p class="desc" data-i18n="projects_p1_desc">
+                    A comprehensive artificial intelligence system designed to detect and map flood potential in Maros Regency. 
+                    The system utilizes Convolutional Neural Networks for initial image classification and Mask R-CNN for precise instance segmentation of flooded areas from satellite imagery.
+                    The inference outputs are integrated directly into an interactive WebGIS platform for real-time visualization.
+                </p>
+                <a href="#contact" class="btn-primary" data-i18n="projects_btn">View Demo</a>
+            </div>
+            <div class="project-image-placeholder">
+                <div class="abstract-map"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title" data-i18n="contact_title">Let's Connect</h2>
+        <div class="contact-box glass">
+            <p data-i18n="contact_p1">I'm currently looking for new opportunities as a Web Developer or IT Staff.</p>
+            <p data-i18n="contact_p2">If you have a position available or just want to chat, feel free to reach out!</p>
+            <a href="mailto:saddamalfarauq7@gmail.com" class="btn-primary" data-i18n="contact_btn">Say Hello</a>
+            
+            <div class="social-links">
+                <a href="https://github.com/Saddamalfarauq" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Saddam Alfarauq. <span data-i18n="footer_rights">All Rights Reserved.</span></p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
