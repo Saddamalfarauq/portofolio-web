@@ -1,161 +1,498 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saddam Alfarauq | Portofolio</title>
-    <meta name="description" content="Portfolio of Saddam Alfarauq, a Junior Web Developer specializing in JavaScript, Deep Learning, and WebGIS.">
+    <title>Saddam Alfarauq | Software Developer & AI Specialist</title>
+    <meta name="description" content="Portofolio Saddam Alfarauq - Software Developer & AI Enthusiast yang berspesialisasi dalam JavaScript, Deep Learning, dan WebGIS.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar glass">
-        <div class="logo">SA.</div>
-        <ul class="nav-links">
-            <li><a href="#home" data-i18n="nav_home">Home</a></li>
-            <li><a href="#about" data-i18n="nav_about">About</a></li>
-            <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
-            <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
-        </ul>
-        <div class="nav-controls">
-            <button id="lang-toggle" class="icon-btn" aria-label="Toggle Language">ID</button>
-            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
-                <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-            </button>
-            <a href="#contact" class="btn-contact" data-i18n="nav_contact">Contact Me</a>
-        </div>
-    </nav>
+    <!-- Background Ambient Gradients -->
+    <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <p class="greeting" data-i18n="hero_greeting">Hello, I'm</p>
-            <h1 class="name">Saddam Alfarauq</h1>
-            <h2 class="title" data-i18n="hero_title">Web Developer & AI Enthusiast</h2>
-            <p class="summary" data-i18n="hero_summary">
-                Certified Junior Web Developer with a strong background in JavaScript and Deep Learning. 
-                Passionate about building scalable applications and intelligent WebGIS solutions.
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <!-- Header / Navbar -->
+    <header class="header-container">
+        <nav class="navbar glass">
+            <a href="#home" class="logo" aria-label="Beranda Saddam Alfarauq">
+                <span class="logo-text">SA</span><span class="logo-dot">.</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active" data-i18n="nav_home">Beranda</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav_about">Tentang</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Keahlian</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Proyek</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Kontak</a></li>
+            </ul>
+
+            <!-- Controls (Lang, Theme, Mobile Hamburger) -->
+            <div class="nav-controls">
+                <button id="lang-toggle" class="control-btn" aria-label="Ganti Bahasa">
+                    <span class="lang-text">EN</span>
+                </button>
+                <button id="theme-toggle" class="control-btn" aria-label="Ganti Tema">
+                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <a href="#contact" class="btn-nav-cta" data-i18n="nav_contact_btn">Hubungi Saya</a>
+                
+                <!-- Mobile Hamburger Toggle -->
+                <button id="mobile-toggle" class="mobile-toggle-btn" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="mobile-menu glass">
+            <ul class="mobile-links">
+                <li><a href="#home" class="mobile-nav-link" data-i18n="nav_home">Beranda</a></li>
+                <li><a href="#about" class="mobile-nav-link" data-i18n="nav_about">Tentang</a></li>
+                <li><a href="#skills" class="mobile-nav-link" data-i18n="nav_skills">Keahlian</a></li>
+                <li><a href="#projects" class="mobile-nav-link" data-i18n="nav_projects">Proyek</a></li>
+                <li><a href="#contact" class="mobile-nav-link" data-i18n="nav_contact">Kontak</a></li>
+            </ul>
+            <div class="mobile-cta-box">
+                <a href="#contact" class="btn-primary mobile-cta-btn" data-i18n="nav_contact_btn">Hubungi Saya</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <!-- Status Badge -->
+                <div class="status-pill">
+                    <span class="pulse-dot"></span>
+                    <span data-i18n="hero_status">Terbuka untuk Peluang Kerja & Kolaborasi</span>
+                </div>
+
+                <p class="greeting" data-i18n="hero_greeting">Halo, saya</p>
+                <h1 class="hero-name">Saddam Alfarauq</h1>
+                <h2 class="hero-role" data-i18n="hero_title">Software Developer & AI Enthusiast</h2>
+                
+                <p class="hero-bio" data-i18n="hero_summary">
+                    Lulusan S1 Teknik Informatika (2026) dari Universitas Bosowa dengan spesialisasi rekayasa perangkat lunak, JavaScript, dan Deep Learning. Berfokus pada pembangunan solusi WebGIS interaktif serta arsitektur sistem yang terukur.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary" data-i18n="hero_btn_work">
+                        <span>Lihat Karya Saya</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="mailto:saddamalfarauq7@gmail.com" class="btn-secondary" data-i18n="hero_btn_contact">
+                        <span>Hubungi Saya</span>
+                    </a>
+                </div>
+
+                <!-- Quick Highlights Strip -->
+                <div class="highlights-strip">
+                    <div class="highlight-item">
+                        <span class="highlight-title">AirNav Makassar</span>
+                        <span class="highlight-subtitle" data-i18n="hl_airnav">Ex-Intern Engineering</span>
+                    </div>
+                    <div class="highlight-divider"></div>
+                    <div class="highlight-item">
+                        <span class="highlight-title">ITB Bandung</span>
+                        <span class="highlight-subtitle" data-i18n="hl_itb">Student Exchange</span>
+                    </div>
+                    <div class="highlight-divider"></div>
+                    <div class="highlight-item">
+                        <span class="highlight-title">WebGIS + AI</span>
+                        <span class="highlight-subtitle" data-i18n="hl_gis">CNN & Mask R-CNN</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="profile-card-wrapper">
+                    <div class="profile-frame glass">
+                        <div class="profile-img-box">
+                            <img src="/src/assets/3052_0 - Copy.jpg" alt="Foto Profil Saddam Alfarauq" class="profile-img">
+                        </div>
+                        <div class="profile-info-pill glass">
+                            <div class="info-avatar">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                </svg>
+                            </div>
+                            <div class="info-details">
+                                <span class="info-name">Saddam Alfarauq</span>
+                                <span class="info-role" data-i18n="profile_card_role">S.Kom Teknik Informatika · Lulusan 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="about_tag">PROFIL & PERJALANAN</span>
+                <h2 class="section-title" data-i18n="about_title">Tentang Saya</h2>
+                <p class="section-subtitle" data-i18n="about_subtitle">Kombinasi antara rekayasa perangkat lunak, kecerdasan buatan, dan kepemimpinan organisasi.</p>
+            </div>
+
+            <div class="about-grid">
+                <!-- Bio & Narrative Card -->
+                <div class="about-card glass">
+                    <h3 class="card-heading" data-i18n="about_bio_title">Eksplorasi & Dedikasi</h3>
+                    <p class="about-paragraph" data-i18n="about_p1">
+                        Saya adalah lulusan S1 Teknik Informatika tahun 2026 dari Universitas Bosowa dengan dedikasi tinggi dalam mengeksplorasi teknologi mutakhir. Keunikan profil saya terletak pada irisan antara pengembangan web modern dan implementasi <em>Deep Learning</em> (khususnya arsitektur CNN dan Mask R-CNN) untuk analisis data spasial.
+                    </p>
+                    <p class="about-paragraph" data-i18n="about_p2">
+                        Selain kemampuan teknis, saya terbiasa memimpin dan berkolaborasi. Pengalaman sebagai Kepala Urusan Internal di Himpunan Mahasiswa Teknik Informatika melatih kemampuan komunikasi, manajemen konflik, dan eksekusi program kerja dalam lingkungan tim yang dinamis.
+                    </p>
+                    
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <span class="stat-number">2026</span>
+                            <span class="stat-label" data-i18n="stat_year">Lulusan S1 (S.Kom)</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label" data-i18n="stat_ai">Model AI Unggulan</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label" data-i18n="stat_commitment">Komitmen & Ketelitian</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline / Experience Card -->
+                <div class="timeline-card glass">
+                    <h3 class="card-heading" data-i18n="about_timeline_title">Pengalaman & Pendidikan</h3>
+                    <div class="timeline-list">
+                        <!-- Item 1 -->
+                        <div class="timeline-entry">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-body">
+                                <div class="entry-header">
+                                    <h4 class="entry-org">MATSC AirNav Makassar</h4>
+                                    <span class="entry-period" data-i18n="about_timeline_1_date">Internship · Teknik</span>
+                                </div>
+                                <p class="entry-desc" data-i18n="about_timeline_1_desc">
+                                    Melakukan pemeliharaan preventif, pengecekan berkala, dan penanganan kendala teknis pada perangkat komunikasi navigasi penerbangan nasional.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="timeline-entry">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-body">
+                                <div class="entry-header">
+                                    <h4 class="entry-org" data-i18n="about_timeline_2_org">Institut Teknologi Bandung (ITB)</h4>
+                                    <span class="entry-period" data-i18n="about_timeline_2_date">Student Exchange</span>
+                                </div>
+                                <p class="entry-desc" data-i18n="about_timeline_2_desc">
+                                    Mengikuti program pertukaran mahasiswa akademik terkemuka, memperdalam wawasan rekayasa dan beradaptasi dalam atmosfer kompetisi akademik tinggi.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="timeline-entry">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-body">
+                                <div class="entry-header">
+                                    <h4 class="entry-org">Universitas Bosowa</h4>
+                                    <span class="entry-period" data-i18n="about_timeline_3_date">2022 - 2026 · S.Kom</span>
+                                </div>
+                                <p class="entry-desc" data-i18n="about_timeline_3_desc">
+                                    Telah menyelesaikan studi sarjana Teknik Informatika dengan fokus pada rekayasa perangkat lunak, sistem cerdas, dan proyek tugas akhir implementasi deteksi bencana berbasis WebGIS.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="skills_tag">KEAHLIAN & TEKNOLOGI</span>
+                <h2 class="section-title" data-i18n="skills_title">Kompetensi Teknis</h2>
+                <p class="section-subtitle" data-i18n="skills_subtitle">Perangkat dan teknologi yang saya gunakan dalam membangun solusi digital.</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Web & Software -->
+                <div class="skill-group glass">
+                    <div class="group-header">
+                        <div class="group-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="group-title" data-i18n="skills_cat1">Web & Software Dev</h3>
+                            <p class="group-sub" data-i18n="skills_cat1_sub">Fondasi pengembangan aplikasi</p>
+                        </div>
+                    </div>
+                    <div class="chips-container">
+                        <span class="tech-chip"><span class="chip-dot"></span>JavaScript (ES6+)</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>Python</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>HTML5 & Modern CSS</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>OOP & Data Structures</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>RESTful APIs</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>Vite & NPM</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>Git & GitHub</span>
+                    </div>
+                </div>
+
+                <!-- AI & Data -->
+                <div class="skill-group glass">
+                    <div class="group-header">
+                        <div class="group-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="group-title" data-i18n="skills_cat2">AI & Geospatial</h3>
+                            <p class="group-sub" data-i18n="skills_cat2_sub">Kecerdasan buatan & pemetaan</p>
+                        </div>
+                    </div>
+                    <div class="chips-container">
+                        <span class="tech-chip"><span class="chip-dot"></span>Deep Learning</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>CNN (Classification)</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>Mask R-CNN (Segmentation)</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>WebGIS & Leaflet</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>Citra Satelit & Spasial</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>Model Inference</span>
+                    </div>
+                </div>
+
+                <!-- Professional & Methodologies -->
+                <div class="skill-group glass">
+                    <div class="group-header">
+                        <div class="group-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="group-title" data-i18n="skills_cat3">Metodologi & Soft Skills</h3>
+                            <p class="group-sub" data-i18n="skills_cat3_sub">Kualitas kerja & kolaborasi tim</p>
+                        </div>
+                    </div>
+                    <div class="chips-container">
+                        <span class="tech-chip"><span class="chip-dot"></span>Team Leadership</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>Problem Solving</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>SDLC & Agile</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>Hardware Troubleshooting</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>Project Management</span>
+                        <span class="tech-chip"><span class="chip-dot"></span>Teknik Komunikasi</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="projects_tag">KARYA UNGGULAN</span>
+                <h2 class="section-title" data-i18n="projects_title">Proyek Pilihan</h2>
+                <p class="section-subtitle" data-i18n="projects_subtitle">Studi kasus nyata penggabungan Machine Learning dan antarmuka geospasial.</p>
+            </div>
+
+            <div class="project-showcase glass">
+                <div class="project-details">
+                    <div class="project-tag-row">
+                        <span class="pill-badge" data-i18n="project_tag_thesis">Tugas Akhir / Skripsi</span>
+                        <span class="pill-badge secondary">Full-Stack AI + GIS</span>
+                    </div>
+
+                    <h3 class="project-title" data-i18n="projects_p1_title">WebGIS Flood Detection System</h3>
+                    
+                    <div class="project-tech-pills">
+                        <span>JavaScript</span>
+                        <span>Python</span>
+                        <span>CNN</span>
+                        <span>Mask R-CNN</span>
+                        <span>WebGIS</span>
+                        <span>GeoJSON</span>
+                    </div>
+
+                    <p class="project-description" data-i18n="projects_p1_desc">
+                        Sistem kecerdasan buatan terpadu untuk mendeteksi dan memetakan potensi risiko banjir di Kabupaten Maros. Menggunakan Convolutional Neural Network (CNN) untuk klasifikasi awal dan Mask R-CNN untuk segmentasi area tergenang secara presisi dari citra satelit, yang divisualisasikan secara langsung melalui platform peta interaktif WebGIS.
+                    </p>
+
+                    <!-- Feature Bullet Points -->
+                    <ul class="project-features">
+                        <li>
+                            <span class="feat-check">✓</span>
+                            <span data-i18n="feat_1">Segmentasi pixel-level otomatis pada citra satelit</span>
+                        </li>
+                        <li>
+                            <span class="feat-check">✓</span>
+                            <span data-i18n="feat_2">Visualisasi poligon banjir interaktif di atas layer peta wilayah</span>
+                        </li>
+                        <li>
+                            <span class="feat-check">✓</span>
+                            <span data-i18n="feat_3">Antarmuka responsif ramah pengguna untuk monitoring potensi bencana</span>
+                        </li>
+                    </ul>
+
+                    <div class="project-cta-group">
+                        <a href="https://skripsi-webgis-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primary" data-i18n="projects_btn">
+                            <span>Buka Live Demo</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/Saddamalfarauq" target="_blank" rel="noopener noreferrer" class="btn-secondary" data-i18n="projects_github_btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Repositori</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sleek Browser Frame -->
+                <div class="project-browser-frame">
+                    <div class="browser-header">
+                        <div class="browser-controls">
+                            <span class="control-dot close"></span>
+                            <span class="control-dot min"></span>
+                            <span class="control-dot max"></span>
+                        </div>
+                        <div class="browser-url-bar">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <span>skripsi-webgis-frontend.vercel.app</span>
+                        </div>
+                    </div>
+                    <div class="browser-content">
+                        <img src="/assets/webgis-screenshot.png" alt="WebGIS Flood Detection System Screenshot" class="browser-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="contact_tag">HUBUNGI SAYA</span>
+                <h2 class="section-title" data-i18n="contact_title">Mari Berkolaborasi</h2>
+                <p class="section-subtitle" data-i18n="contact_subtitle">Tertarik bekerja sama atau mendiskusikan peluang kerja? Pintu saya selalu terbuka.</p>
+            </div>
+
+            <div class="contact-card glass">
+                <div class="contact-card-content">
+                    <h3 class="contact-heading" data-i18n="contact_heading">Siap Membangun Sesuatu yang Berdampak?</h3>
+                    <p class="contact-lead" data-i18n="contact_lead">
+                        Saya sedang mencari peluang karir sebagai Software Developer, Web Developer, atau IT Staff. Silakan sapa saya melalui email atau jaringan profesional berikut:
+                    </p>
+
+                    <!-- Interactive Email Copy Widget -->
+                    <div class="email-copy-widget">
+                        <div class="email-display">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span id="email-address">saddamalfarauq7@gmail.com</span>
+                        </div>
+                        <button id="copy-email-btn" class="btn-copy" aria-label="Salin alamat email">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            <span id="copy-btn-text" data-i18n="btn_copy">Salin</span>
+                        </button>
+                    </div>
+
+                    <!-- Direct Contact CTAs -->
+                    <div class="contact-actions">
+                        <a href="mailto:saddamalfarauq7@gmail.com" class="btn-primary" data-i18n="contact_btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                            <span data-i18n="btn_send_email">Kirim Email Sekarang</span>
+                        </a>
+                    </div>
+
+                    <!-- Social Presence -->
+                    <div class="social-channels">
+                        <a href="https://github.com/Saddamalfarauq" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="GitHub Profile">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="mailto:saddamalfarauq7@gmail.com" class="social-chip" aria-label="Direct Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="logo-text">SA</span><span class="logo-dot">.</span>
+                <span class="footer-desc">Saddam Alfarauq · Portfolio</span>
+            </div>
+            <p class="footer-copy">
+                &copy; <span id="year"></span> Saddam Alfarauq. <span data-i18n="footer_rights">Hak Cipta Dilindungi.</span>
             </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn-primary" data-i18n="hero_btn_work">View My Work</a>
-                <a href="#contact" class="btn-secondary" data-i18n="hero_btn_cv">Download CV</a>
-            </div>
+            <p class="footer-credit" data-i18n="footer_credits">
+                Dibangun dengan dedikasi menggunakan Vite & Vanilla CSS.
+            </p>
         </div>
-        <div class="hero-visual">
-            <div class="glow-orb"></div>
-            <!-- Profile Image -->
-            <div class="profile-image-container glass">
-                 <img src="/src/assets/3052_0 - Copy.jpg" alt="Saddam Alfarauq" class="profile-img">
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2 class="section-title" data-i18n="about_title">About Me</h2>
-        <div class="about-grid">
-            <div class="about-text glass">
-                <p data-i18n="about_p1">
-                    I am a final-year Information Technology student at Universitas Bosowa with a strong drive for learning. I bring a unique blend of front-end development and data science skills, specifically in implementing Deep Learning (CNN & Mask R-CNN) for geospatial data analysis.
-                </p>
-                <p data-i18n="about_p2">
-                    My leadership experience as the Head of Internal Affairs in my university's IT Student Association has equipped me with excellent communication and team management skills.
-                </p>
-            </div>
-            <div class="timeline glass">
-                <h3 data-i18n="about_timeline_title">Experience & Education</h3>
-                <div class="timeline-item">
-                    <h4>MATSC AirNav Makassar</h4>
-                    <p class="date" data-i18n="about_timeline_1_date">Intern - Engineering Division</p>
-                    <p data-i18n="about_timeline_1_desc">Preventive maintenance and troubleshooting of aviation communication tools.</p>
-                </div>
-                <div class="timeline-item">
-                    <h4 data-i18n="about_timeline_2_org">Institut Teknologi Bandung (ITB)</h4>
-                    <p class="date" data-i18n="about_timeline_2_date">Student Exchange Program</p>
-                    <p data-i18n="about_timeline_2_desc">Immersed in a highly competitive academic environment.</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>Universitas Bosowa</h4>
-                    <p class="date" data-i18n="about_timeline_3_date">B.S. Information Technology (Present)</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <h2 class="section-title" data-i18n="skills_title">Technical Expertise</h2>
-        <div class="skills-container">
-            <div class="skill-category glass">
-                <h3 data-i18n="skills_cat1">Development</h3>
-                <ul>
-                    <li data-i18n="skills_cat1_1">JavaScript (Web & Mobile)</li>
-                    <li data-i18n="skills_cat1_2">HTML5 & CSS3</li>
-                    <li data-i18n="skills_cat1_3">Vite & Modern Tooling</li>
-                    <li data-i18n="skills_cat1_4">Git Version Control</li>
-                </ul>
-            </div>
-            <div class="skill-category glass">
-                <h3 data-i18n="skills_cat2">AI & Data</h3>
-                <ul>
-                    <li data-i18n="skills_cat2_1">Python</li>
-                    <li data-i18n="skills_cat2_2">Deep Learning</li>
-                    <li data-i18n="skills_cat2_3">CNN & Mask R-CNN</li>
-                    <li data-i18n="skills_cat2_4">WebGIS Integration</li>
-                </ul>
-            </div>
-            <div class="skill-category glass">
-                <h3 data-i18n="skills_cat3">Soft Skills</h3>
-                <ul>
-                    <li data-i18n="skills_cat3_1">Team Leadership</li>
-                    <li data-i18n="skills_cat3_2">Problem Solving</li>
-                    <li data-i18n="skills_cat3_3">Hardware Troubleshooting</li>
-                    <li data-i18n="skills_cat3_4">Project Management</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2 class="section-title" data-i18n="projects_title">Featured Project</h2>
-        <div class="project-card glass">
-            <div class="project-info">
-                <h3 data-i18n="projects_p1_title">WebGIS Flood Detection System</h3>
-                <p class="tech-stack">JavaScript • Python • CNN • Mask R-CNN • WebGIS</p>
-                <p class="desc" data-i18n="projects_p1_desc">
-                    A comprehensive artificial intelligence system designed to detect and map flood potential in Maros Regency. 
-                    The system utilizes Convolutional Neural Networks for initial image classification and Mask R-CNN for precise instance segmentation of flooded areas from satellite imagery.
-                    The inference outputs are integrated directly into an interactive WebGIS platform for real-time visualization.
-                </p>
-                <a href="https://skripsi-webgis-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primary" data-i18n="projects_btn">View Demo</a>
-            </div>
-            <div class="project-image-placeholder">
-                <img src="/assets/webgis-screenshot.png" alt="WebGIS Flood Detection" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; opacity: 0.8;">
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2 class="section-title" data-i18n="contact_title">Let's Connect</h2>
-        <div class="contact-box glass">
-            <p data-i18n="contact_p1">I'm currently looking for new opportunities as a Web Developer or IT Staff.</p>
-            <p data-i18n="contact_p2">If you have a position available or just want to chat, feel free to reach out!</p>
-            <a href="mailto:saddamalfarauq7@gmail.com" class="btn-primary" data-i18n="contact_btn">Say Hello</a>
-            
-            <div class="social-links">
-                <a href="https://github.com/Saddamalfarauq" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; <span id="year"></span> Saddam Alfarauq. <span data-i18n="footer_rights">All Rights Reserved.</span></p>
     </footer>
 
     <script type="module" src="/src/main.js"></script>
