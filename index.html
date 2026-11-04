@@ -151,7 +151,7 @@
                 <div class="hero-visual-card">
                     <div class="profile-frame">
                         <div class="image-wrapper">
-                            <img src="/src/assets/3052_0 - Copy.jpg" alt="Saddam Alfarauq di Kampus ITB Bandung" class="profile-photo" loading="eager">
+                            <img src="/src/assets/3052_0 - Copy.jpg" alt="Saddam Alfarauq di Kampus ITB Bandung" class="profile-photo" width="400" height="480" loading="eager">
                         </div>
                         <div class="frame-caption">
                             <div class="caption-header">
@@ -289,7 +289,7 @@
                                         </a>
                                     </div>
                                     <div class="viewport-media">
-                                        <img src="/assets/webgis-screenshot.png" alt="Tangkapan layar antarmuka WebGIS Sistem Deteksi Banjir Maros" class="preview-img" loading="lazy">
+                                        <img src="/assets/webgis-screenshot.png" alt="Tangkapan layar antarmuka WebGIS Sistem Deteksi Banjir Maros" class="preview-img" width="960" height="600" loading="lazy">
                                     </div>
                                 </div>
                             </div>
@@ -364,7 +364,13 @@
                     <div id="tab-specs" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-specs">
                         <div class="specs-grid-layout">
                             <div class="spec-card">
-                                <div class="spec-icon">🎯</div>
+                                <div class="spec-icon" aria-hidden="true">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="6"></circle>
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                    </svg>
+                                </div>
                                 <h4 class="spec-title" data-i18n="spec1_title">Latar Belakang & Masalah</h4>
                                 <p class="spec-desc" data-i18n="spec1_desc">
                                     Kabupaten Maros memiliki kerentanan musiman tinggi terhadap banjir. Pemantauan manual sering lambat dan berisiko. Proyek ini memvalidasi apakah Deep Learning otomatis dapat memetakan genangan secara akurat untuk mendukung pengambilan keputusan tanggap darurat.
@@ -372,7 +378,13 @@
                             </div>
 
                             <div class="spec-card">
-                                <div class="spec-icon">⚡</div>
+                                <div class="spec-icon" aria-hidden="true">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                        <polyline points="2 17 12 22 22 17"></polyline>
+                                        <polyline points="2 12 12 17 22 12"></polyline>
+                                    </svg>
+                                </div>
                                 <h4 class="spec-title" data-i18n="spec2_title">Tantangan Rekayasa Teknis</h4>
                                 <p class="spec-desc" data-i18n="spec2_desc">
                                     Citra satelit tropis memiliki gangguan tutupan awan, pantulan kanopi pohon lebat, dan variasi warna tanah basah yang rawan memicu <em>false-positive</em>. Diperlukan penyesuaian threshold kanal spektral dan augmentasi dataset spesifik wilayah Maros.
@@ -380,7 +392,12 @@
                             </div>
 
                             <div class="spec-card">
-                                <div class="spec-icon">📈</div>
+                                <div class="spec-icon" aria-hidden="true">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                        <polyline points="17 6 23 6 23 12"></polyline>
+                                    </svg>
+                                </div>
                                 <h4 class="spec-title" data-i18n="spec3_title">Hasil & Nilai Tambah</h4>
                                 <p class="spec-desc" data-i18n="spec3_desc">
                                     Model Mask R-CNN mampu memisahkan area tergenang dengan presisi tinggi dan menghasilkan poligon yang siap disajikan secara instan di peta web tanpa perlu instalasi software GIS desktop yang rumit.
@@ -504,7 +521,12 @@
                     <!-- Domain 1: Web & Software Engineering -->
                     <div class="domain-card">
                         <div class="domain-header">
-                            <span class="domain-icon">⚡</span>
+                            <span class="domain-icon" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </span>
                             <div>
                                 <h3 class="domain-name" data-i18n="domain1_name">Web & Software Engineering</h3>
                                 <p class="domain-sub" data-i18n="domain1_sub">Fondasi pengembangan antarmuka & logika aplikasi</p>
@@ -524,7 +546,13 @@
                     <!-- Domain 2: AI & Geospatial Systems -->
                     <div class="domain-card">
                         <div class="domain-header">
-                            <span class="domain-icon">🛰️</span>
+                            <span class="domain-icon" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                </svg>
+                            </span>
                             <div>
                                 <h3 class="domain-name" data-i18n="domain2_name">AI & Geospatial Systems</h3>
                                 <p class="domain-sub" data-i18n="domain2_sub">Pemrosesan citra satelit & antarmuka peta interaktif</p>
@@ -544,7 +572,19 @@
                     <!-- Domain 3: Tools & Reliability -->
                     <div class="domain-card">
                         <div class="domain-header">
-                            <span class="domain-icon">🛠️</span>
+                            <span class="domain-icon" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="4" y1="21" x2="4" y2="14"></line>
+                                    <line x1="4" y1="10" x2="4" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="12"></line>
+                                    <line x1="12" y1="8" x2="12" y2="3"></line>
+                                    <line x1="20" y1="21" x2="20" y2="16"></line>
+                                    <line x1="20" y1="12" x2="20" y2="3"></line>
+                                    <line x1="1" y1="14" x2="7" y2="14"></line>
+                                    <line x1="9" y1="8" x2="15" y2="8"></line>
+                                    <line x1="17" y1="16" x2="23" y2="16"></line>
+                                </svg>
+                            </span>
                             <div>
                                 <h3 class="domain-name" data-i18n="domain3_name">Engineering Tools & Workflow</h3>
                                 <p class="domain-sub" data-i18n="domain3_sub">Kontrol versi, pemeliharaan sistem & kolaborasi tim</p>

@@ -1101,7 +1101,16 @@ body.light-mode .tab-button:hover {
 }
 
 .spec-icon {
-    font-size: 1.6rem;
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-xs);
+    background-color: var(--accent-subtle);
+    border: 1px solid var(--accent-border);
+    color: var(--accent);
+    flex-shrink: 0;
 }
 
 .spec-title {
@@ -1290,8 +1299,16 @@ body.light-mode .tab-button:hover {
 }
 
 .domain-icon {
-    font-size: 1.5rem;
-    line-height: 1;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-xs);
+    background-color: var(--accent-subtle);
+    border: 1px solid var(--accent-border);
+    color: var(--accent);
+    flex-shrink: 0;
 }
 
 .domain-name {
@@ -1582,5 +1599,32 @@ body.light-mode .tab-button:hover {
 
     .footer-right {
         align-items: flex-start;
+    }
+
+    .btn-control,
+    .btn-mobile-toggle {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+/* ==========================================================================
+   Motion Accessibility (WCAG 2.2 AA - prefers-reduced-motion)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .profile-frame:hover,
+    .spec-card:hover,
+    .step-card:hover,
+    .domain-card:hover,
+    .btn-primary:hover,
+    .btn-secondary:hover {
+        transform: none !important;
     }
 }

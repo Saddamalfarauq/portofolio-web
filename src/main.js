@@ -474,18 +474,21 @@ function highlightNav() {
 
 window.addEventListener('scroll', highlightNav);
 
-// --- Interactive Cursor Spotlight ---
-let isMouseMoving = false;
-window.addEventListener('mousemove', (e) => {
-    if (!isMouseMoving) {
-        requestAnimationFrame(() => {
-            document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
-            document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
-            isMouseMoving = false;
-        });
-        isMouseMoving = true;
-    }
-}, { passive: true });
+// --- Interactive Cursor Spotlight (Respects Reduced Motion) ---
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!prefersReducedMotion) {
+    let isMouseMoving = false;
+    window.addEventListener('mousemove', (e) => {
+        if (!isMouseMoving) {
+            requestAnimationFrame(() => {
+                document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+                document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+                isMouseMoving = false;
+            });
+            isMouseMoving = true;
+        }
+    }, { passive: true });
+}
 
 // Initialize
 applyLanguage(currentLang);
