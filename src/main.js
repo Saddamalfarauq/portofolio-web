@@ -490,6 +490,34 @@ if (!prefersReducedMotion) {
     }, { passive: true });
 }
 
+// --- Subtle Scroll Reveal Motion (Lightweight & Accessible) ---
+if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    const revealTargets = document.querySelectorAll(
+        '.section-title-block, .case-study-card, .bio-narrative-card, .timeline-item, .domain-card, .tech-hint-box, .contact-cta-card'
+    );
+
+    revealTargets.forEach(el => el.classList.add('reveal-hidden'));
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+                // Clean up classes after transition completes to preserve natural hover states
+                setTimeout(() => {
+                    entry.target.classList.remove('reveal-hidden', 'revealed');
+                }, 600);
+            }
+        });
+    }, {
+        root: null,
+        threshold: 0.08,
+        rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealTargets.forEach(el => revealObserver.observe(el));
+}
+
 // Initialize
 applyLanguage(currentLang);
 updateThemeIcon();

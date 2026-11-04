@@ -1609,6 +1609,22 @@ body.light-mode .tab-button:hover {
 }
 
 /* ==========================================================================
+   Subtle Scroll Reveal Motion (Fluid & Snappy)
+   ========================================================================== */
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-hidden.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
    Motion Accessibility (WCAG 2.2 AA - prefers-reduced-motion)
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
@@ -1617,6 +1633,12 @@ body.light-mode .tab-button:hover {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+    }
+
+    .reveal-hidden {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
     }
 
     .profile-frame:hover,
