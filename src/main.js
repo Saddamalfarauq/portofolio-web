@@ -19,7 +19,7 @@ const translations = {
         hero_availability: "Siap Bergabung untuk Posisi Full-Time / Kontrak",
         hero_greeting: "Halo, saya Saddam Alfarauq.",
         hero_title: "Software & Web Developer dengan Spesialisasi Geospatial AI",
-        hero_description: "Menggabungkan rekayasa perangkat lunak modern (JavaScript, OOP, arsitektur RESTful API) dengan implementasi model Computer Vision (CNN & Mask R-CNN) untuk visualisasi geospasial WebGIS. Lulusan S1 TI Universitas Bosowa (IPK 3.81 Cum Laude), PMM Awardee di Teknik Informatika ITB, dan tersertifikasi BNSP.",
+        hero_description: "Menggabungkan rekayasa perangkat lunak modern (React 19, JavaScript, FastAPI, arsitektur RESTful API) dengan implementasi model Computer Vision (EfficientNet & Mask R-CNN) untuk visualisasi geospasial WebGIS. Lulusan S1 TI Universitas Bosowa (IPK 3.81 Cum Laude), PMM Awardee di Teknik Informatika ITB, dan tersertifikasi BNSP.",
         hero_cta_projects: "Eksplorasi Proyek",
         hero_cta_cv: "Unduh CV",
         hero_cta_copy: "Salin Email",
@@ -29,43 +29,43 @@ const translations = {
         cred_gpa: "IPK 3.81 (Cum Laude)",
 
         proj_kicker: "PROYEK PILIHAN & RISET REKAYASA",
-        proj_heading: "Sistem Deteksi Banjir WebGIS Berbasis AI",
-        proj_lead: "Eksplorasi mendalam arsitektur full-stack yang mengintegrasikan model segmentasi piksel citra satelit ke platform pemetaan web interaktif.",
+        proj_heading: "Sentinel FloodRisk AI • Institutional WebGIS",
+        proj_lead: "Platform pemetaan risiko banjir otomatis skala institusional Kabupaten Maros berbasis fusi satelit multi-sensor (Sentinel-1 SAR C-Band & Sentinel-2 MSI), cascaded dual-stage deep learning (EfficientNet-B4 + Mask R-CNN ResNet-101 FPN), segmentasi Otsu adaptif, dan validasi Explainable AI (Grad-CAM).",
         tab_interface: "Tampilan Antarmuka & Demo",
         tab_pipeline: "Arsitektur Pipeline AI",
         tab_specs: "Tantangan & Metrik Rekayasa",
 
-        proj_badge_thesis: "Tugas Akhir / Skripsi S1",
-        proj_case_title: "WebGIS Flood Detection System — Kabupaten Maros",
-        proj_case_summary: "Sistem informasi geospasial berbasis web untuk memetakan dan mendeteksi sebaran area tergenang banjir secara presisi di Kabupaten Maros. Menggabungkan klasifikasi citra satelit dan segmentasi semantik Mask R-CNN yang dirender ke layer poligon interaktif peta Leaflet.",
-        proj_deliv1_title: "Segmentasi Instance Presisi:",
-        proj_deliv1_desc: "Deteksi batas piksel genangan air dari citra satelit resolusi spasial tinggi.",
-        proj_deliv2_title: "Vektorisasi Geospasial Dinamis:",
-        proj_deliv2_desc: "Konversi otomatis mask hasil prediksi AI menjadi format GeoJSON poligon siap peta.",
-        proj_deliv3_title: "UI Monitoring Responsif:",
-        proj_deliv3_desc: "Antarmuka peta ramah pengguna untuk mitigasi dan pemantauan cepat tanggap bencana.",
+        proj_badge_thesis: "Tugas Akhir S1 Cum Laude · Univ. Bosowa 2026",
+        proj_case_title: "Sentinel FloodRisk AI — Sistem WebGIS Deteksi & Pemetaan Risiko Banjir Kabupaten Maros",
+        proj_case_summary: "Sistem informasi geospasial end-to-end yang memetakan genangan banjir secara presisi di 14 kecamatan Kabupaten Maros. Memadukan radar penembus awan Sentinel-1 SAR (hamburan balik specular < -14 dB) dengan citra optik Sentinel-2 (NDWI/NDVI) dan elevasi DEM SRTM 30m. Menggerakkan pipeline deep learning dua tahap untuk mendeteksi 29 zona genangan seluas 13.279,8 Ha pada benchmark banjir historis Januari 2023.",
+        proj_deliv1_title: "Delineasi Spasial 29 Zona Banjir (13.279 Ha):",
+        proj_deliv1_desc: "Segmentasi poligon genangan presisi piksel berbasis Mask R-CNN dan ambang batas Otsu adaptif pada skenario bencana Januari 2023.",
+        proj_deliv2_title: "Fusi Multi-Sensor 9-Kanal & SAR Tembus Awan:",
+        proj_deliv2_desc: "Mengatasi kendala tutupan awan musim hujan tropis melalui fusi saluran optik (B2, B3, B4, B8, NDWI, NDVI), radar Sentinel-1 SAR (VV/VH), dan topografi DEM SRTM 30m.",
+        proj_deliv3_title: "Filter 14 Kecamatan & Interoperabilitas GIS:",
+        proj_deliv3_desc: "Filter granular wilayah, matriks rekapitulasi risiko standar BNPB, dan ekspor 1-klik format GeoJSON standar WGS84 siap pakai di QGIS, ArcGIS Pro, atau posko BPBD.",
         proj_btn_demo: "Buka Live Demo",
         proj_btn_repo: "Lihat Repositori",
 
         pipe_title: "Arsitektur Pipeline AI & Geospasial",
-        pipe_desc: "Alur komputasi dari akuisisi citra satelit mentah hingga menjadi lapisan poligon interaktif pada peta web.",
-        step1_title: "Citra Satelit & Preprocessing",
-        step1_desc: "Ekstraksi citra satelit area Kabupaten Maros. Normalisasi kontras, pembagian petak koordinat spasial, dan augmentasi data pelatihan.",
-        step2_title: "Klasifikasi Awal (CNN)",
-        step2_desc: "Model CNN menyaring dan mengelompokkan area yang memiliki karakteristik genangan air tinggi untuk efisiensi beban komputasi.",
-        step3_title: "Segmentasi Presisi (Mask R-CNN)",
-        step3_desc: "Menghasilkan mask segmentasi tingkat piksel untuk mengisolasi batas genangan banjir dari objek daratan lainnya secara akurat.",
-        step4_title: "Vektorisasi ke GeoJSON",
-        step4_desc: "Mask piksel biner dikonversi menjadi poligon vektor berstandar GeoJSON dengan referensi koordinat geografis nyata (WGS84).",
-        step5_title: "Visualisasi WebGIS Interaktif",
-        step5_desc: "Lapisan GeoJSON dirender dinamis di atas antarmuka peta Leaflet.js dengan kontrol interaktif, tooltip wilayah, dan level kedalaman.",
+        pipe_desc: "Alur komputasi dari ingesti satelit multi-sensor hingga pemodelan vektor interaktif pada peta web.",
+        step1_title: "Ingesti Multi-Sensor 9-Kanal (GEE API)",
+        step1_desc: "Ekstraksi citra satelit mentah real-time via Google Earth Engine API: 4 kanal optik Sentinel-2 (B02, B03, B04, B08), 2 indeks spektral (NDWI & NDVI), 2 kanal radar Sentinel-1 SAR C-Band (VV & VH), dan model elevasi digital SRTM 30m.",
+        step2_title: "Macro Screening — CNN (EfficientNet-B4)",
+        step2_desc: "Penyaring cepat (Gatekeeper) yang mengklasifikasikan tingkat risiko regional (Rendah, Sedang, Tinggi, Sangat Tinggi) dengan akurasi validasi 79,59%, mengoptimalkan efisiensi komputasi inferensi GPU.",
+        step3_title: "Micro Delineation — Mask R-CNN (ResNet-101 FPN)",
+        step3_desc: "Segmentasi instans tingkat piksel dengan modifikasi extreme anchor ratios [0.2, 0.5, 1.0, 2.0, 5.0] untuk menangkap pola meliuk aliran sungai dan genangan persawahan datar Maros.",
+        step4_title: "Segmentasi Otsu Adaptif & Vektorisasi GeoJSON",
+        step4_desc: "Penyempurnaan batas air dengan ambang batas Otsu morfologis pada komposit SAR/NDWI, diikuti konversi otomatis mask biner menjadi poligon vektor standar GeoJSON (WGS84).",
+        step5_title: "Visualisasi WebGIS, XAI (Grad-CAM) & Integrasi Cloud",
+        step5_desc: "Penyajian interaktif di peta Leaflet.js dengan kontrol 14 kecamatan, visualisasi transparansi Explainable AI (Grad-CAM), serta orkestrasi backend FastAPI via tunnel terenkripsi ke deployment Vercel.",
 
-        spec1_title: "Latar Belakang & Masalah",
-        spec1_desc: "Kabupaten Maros memiliki kerentanan musiman tinggi terhadap banjir. Pemantauan manual sering lambat dan berisiko. Proyek ini memvalidasi apakah Deep Learning otomatis dapat memetakan genangan secara akurat untuk mendukung pengambilan keputusan tanggap darurat.",
-        spec2_title: "Tantangan Rekayasa Teknis",
-        spec2_desc: "Citra satelit tropis memiliki gangguan tutupan awan, pantulan kanopi pohon lebat, dan variasi warna tanah basah yang rawan memicu false-positive. Diperlukan penyesuaian threshold kanal spektral dan augmentasi dataset spesifik wilayah Maros.",
-        spec3_title: "Hasil & Nilai Tambah",
-        spec3_desc: "Model Mask R-CNN mampu memisahkan area tergenang dengan presisi tinggi dan menghasilkan poligon yang siap disajikan secara instan di peta web tanpa perlu instalasi software GIS desktop yang rumit.",
+        spec1_title: "Kerentanan Hidrologi Dataran Maros",
+        spec1_desc: "Kabupaten Maros memiliki dataran rendah barat (<10 mdpl) yang merupakan muara DAS utama dan penampung air gravitasi, rawan banjir musiman parah. Sistem ini menghadirkan early warning otomatis tanpa ketergantungan pada survei manual lapangan yang berisiko lambat.",
+        spec2_title: "Terobosan Radar Tembus Awan (SAR Specular Reflection)",
+        spec2_desc: "Musim hujan tropis menghasilkan tutupan awan tebal yang membutakan satelit optik biasa. Diatasi dengan gelombang mikro Sentinel-1 SAR C-Band (~5.6 cm) bebas bias awan, di mana permukaan air memantulkan sinyal menjauhi sensor (specular reflection < -14 dB).",
+        spec3_title: "Validasi Ilmiah & Explainable AI (Grad-CAM)",
+        spec3_desc: "Model mencapai Mean IoU 0.862, Precision 0.914, dan Dice Score 0.905. Panel atensi Grad-CAM membuktikan bahwa model mengenali fisik hamburan balik radar dan topografi dataran rendah secara akurat, bukan sekadar menebak noise latar belakang.",
 
         about_kicker: "PROFIL & PERJALANAN",
         about_heading: "Tentang Saddam Alfarauq",
@@ -118,7 +118,7 @@ const translations = {
         hero_availability: "Available for Full-Time / Contract Engineering Roles",
         hero_greeting: "Hello, I'm Saddam Alfarauq.",
         hero_title: "Software & Web Developer with Geospatial AI Expertise",
-        hero_description: "Bridging modern software engineering (JavaScript, OOP, RESTful API architecture) with Computer Vision deep learning models (CNN & Mask R-CNN) for interactive WebGIS visualization. B.S. in Information Technology from Universitas Bosowa (GPA 3.81 Cum Laude), PMM Awardee at ITB Computer Science, and BNSP certified.",
+        hero_description: "Bridging modern full-stack engineering (React 19, JavaScript, FastAPI, RESTful architecture) with Computer Vision deep learning models (EfficientNet-B4 & Mask R-CNN) for interactive WebGIS visualization. B.S. in Information Technology from Universitas Bosowa (GPA 3.81 Cum Laude), PMM Awardee at ITB Computer Science, and BNSP certified.",
         hero_cta_projects: "Explore Project",
         hero_cta_cv: "Download CV",
         hero_cta_copy: "Copy Email",
@@ -128,43 +128,43 @@ const translations = {
         cred_gpa: "GPA 3.81 (Cum Laude)",
 
         proj_kicker: "FEATURED WORK & RESEARCH",
-        proj_heading: "AI-Powered WebGIS Flood Detection System",
-        proj_lead: "A comprehensive full-stack architectural case study integrating satellite pixel-level segmentation into an interactive web mapping platform.",
+        proj_heading: "Sentinel FloodRisk AI • Institutional WebGIS",
+        proj_lead: "Institutional-grade automated flood monitoring platform for Maros Regency powered by multi-sensor satellite fusion (Sentinel-1 SAR C-Band & Sentinel-2 MSI), cascaded dual-stage deep learning (EfficientNet-B4 + Mask R-CNN ResNet-101 FPN), adaptive Otsu segmentation, and Explainable AI (Grad-CAM).",
         tab_interface: "Interface & Live Demo",
         tab_pipeline: "AI Pipeline Architecture",
         tab_specs: "Engineering Challenges & Specs",
 
-        proj_badge_thesis: "Graduation Thesis Project",
-        proj_case_title: "WebGIS Flood Detection System — Maros Regency",
-        proj_case_summary: "A web-based geospatial intelligence platform built to accurately delineate and monitor flood inundation zones across Maros Regency. Combines satellite image classification with Mask R-CNN instance segmentation streamed into dynamic Leaflet vector map layers.",
-        proj_deliv1_title: "Precision Instance Segmentation:",
-        proj_deliv1_desc: "Pixel-accurate inundation boundary detection on high-resolution satellite scenes.",
-        proj_deliv2_title: "Dynamic Geospatial Vectorization:",
-        proj_deliv2_desc: "Automated pipeline converting raw prediction masks into clean GeoJSON map polygons.",
-        proj_deliv3_title: "Responsive Monitoring Interface:",
-        proj_deliv3_desc: "Intuitive decision-support mapping UI tailored for rapid disaster mitigation teams.",
+        proj_badge_thesis: "Bachelor's Thesis (Cum Laude) · Bosowa Univ 2026",
+        proj_case_title: "Sentinel FloodRisk AI — Multi-Sensor Flood Inundation WebGIS Platform for Maros Regency",
+        proj_case_summary: "An end-to-end geospatial intelligence system mapping flood inundation across all 14 districts in Maros Regency. Fuses cloud-penetrating Sentinel-1 SAR radar (specular backscatter < -14 dB) with Sentinel-2 optical imagery (NDWI/NDVI) and SRTM 30m DEM elevation. Drives a cascaded dual-stage deep learning pipeline delineating 29 flood zones spanning 13,279.8 Ha during the January 2023 disaster benchmark.",
+        proj_deliv1_title: "Spatial Delineation of 29 Flood Zones (13,279 Ha):",
+        proj_deliv1_desc: "Pixel-accurate inundation polygon segmentation driven by Mask R-CNN and adaptive Otsu thresholding during the major January 2023 disaster benchmark.",
+        proj_deliv2_title: "9-Channel Multi-Sensor Fusion & Cloud-Penetrating SAR:",
+        proj_deliv2_desc: "Overcomes monsoon cloud cover by fusing optical bands (B2, B3, B4, B8, NDWI, NDVI), Sentinel-1 SAR radar (VV/VH), and SRTM 30m DEM topography.",
+        proj_deliv3_title: "14-District Granular Filter & GIS Interoperability:",
+        proj_deliv3_desc: "Per-district granular inspection, BNPB hazard classification matrix, and one-click GeoJSON export (WGS84) ready for immediate import into QGIS, ArcGIS Pro, or emergency command centers.",
         proj_btn_demo: "Launch Live Demo",
         proj_btn_repo: "View Repository",
 
         pipe_title: "AI & Geospatial Pipeline Architecture",
-        pipe_desc: "Computational journey transforming raw satellite imagery into interactive vector polygon layers on the web.",
-        step1_title: "Satellite Imagery & Preprocessing",
-        step1_desc: "Extracting satellite tiles across Maros Regency. Contrast enhancement, patch slicing, and training dataset augmentation.",
-        step2_title: "Initial Screening (CNN)",
-        step2_desc: "CNN model scans and filters tiles with high flood probability to optimize downstream compute resources.",
-        step3_title: "Precision Segmentation (Mask R-CNN)",
-        step3_desc: "Generates pixel-accurate instance masks isolating water inundation from dense vegetation and urban terrain.",
-        step4_title: "GeoJSON Vectorization",
-        step4_desc: "Binary prediction masks converted to standardized GeoJSON polygons referenced to WGS84 coordinates.",
-        step5_title: "Interactive WebGIS Layering",
-        step5_desc: "Dynamic rendering on Leaflet.js with regional toggle controls, interactive tooltips, and severity gradients.",
+        pipe_desc: "Computational journey transforming raw multi-sensor satellite imagery into interactive vector polygon layers on the web.",
+        step1_title: "9-Channel Multi-Sensor Ingestion (GEE API)",
+        step1_desc: "Real-time satellite ingestion via Google Earth Engine API: 4 Sentinel-2 optical bands (B02, B03, B04, B08), 2 spectral indices (NDWI & NDVI), 2 Sentinel-1 SAR C-Band radar bands (VV & VH), and SRTM 30m digital elevation model.",
+        step2_title: "Macro Screening — CNN (EfficientNet-B4)",
+        step2_desc: "High-throughput gatekeeper classifying territorial risk levels (Low, Moderate, High, Very High) with 79.59% validation accuracy, optimizing downstream GPU compute workloads.",
+        step3_title: "Micro Delineation — Mask R-CNN (ResNet-101 FPN)",
+        step3_desc: "Pixel-level instance segmentation with custom extreme anchor ratios [0.2, 0.5, 1.0, 2.0, 5.0] engineered specifically to capture meandering river channels and flat Maros floodplains.",
+        step4_title: "Adaptive Otsu Thresholding & GeoJSON Vectorization",
+        step4_desc: "Refining water boundaries via morphological Otsu thresholding on SAR/NDWI composites, automatically converting binary prediction masks into standardized GeoJSON polygons (WGS84).",
+        step5_title: "Interactive WebGIS, XAI (Grad-CAM) & Edge-to-Cloud Integration",
+        step5_desc: "Dynamic rendering on Leaflet.js with 14-district controls, Explainable AI Grad-CAM transparency heatmaps, and hybrid FastAPI backend orchestration tunneled to Vercel.",
 
-        spec1_title: "Problem & Context",
-        spec1_desc: "Maros Regency faces severe seasonal flood risks. Manual field survey is hazardous and slow. This project validates whether automated Deep Learning can accurately map inundation extents for emergency response.",
-        spec2_title: "Technical Engineering Challenges",
-        spec2_desc: "Tropical satellite imagery suffers from dense cloud cover, heavy canopy reflection, and muddy soil variations causing false positives. Solved via spectral thresholding and tailored regional dataset augmentation.",
-        spec3_title: "Delivered Value & Outcome",
-        spec3_desc: "The system delivers fast, browser-accessible disaster visualization eliminating the need for bulky desktop GIS software installations.",
+        spec1_title: "Hydrological Vulnerability of Maros Floodplains",
+        spec1_desc: "Maros Regency features western lowlands (<10m ASL) acting as watershed estuaries and gravity basins subject to severe seasonal inundation. The system delivers automated early warnings eliminating hazardous and slow manual field surveys.",
+        spec2_title: "Cloud-Penetrating Radar Breakthrough (SAR Specular Reflection)",
+        spec2_desc: "Tropical monsoon cloud cover blinds standard optical satellites. Overcome via Sentinel-1 SAR C-Band microwaves (~5.6 cm) impervious to cloud cover, where calm water acts as a specular reflector bouncing signals away from the sensor (< -14 dB).",
+        spec3_title: "Scientific Validation & Explainable AI (Grad-CAM)",
+        spec3_desc: "The model achieved Mean IoU of 0.862, Precision of 0.914, and Dice Score of 0.905. Integrated Grad-CAM attention maps verify neural predictions are physically grounded in radar backscatter and floodplain topography rather than background noise.",
 
         about_kicker: "PROFILE & TRACK RECORD",
         about_heading: "About Saddam Alfarauq",
@@ -218,7 +218,10 @@ const techContextMap = {
         css: "Modern CSS: Styling presisi dengan Flexbox, CSS Grid, variabel sistem (tokens), dan responsivitas tanpa dependensi berat.",
         vite: "Vite: Tooling pengembangan modern untuk bundling cepat, environment dev instan, dan optimasi aset produksi.",
         react: "React: Fondasi komponen reaktif, pengelolaan state, dan arsitektur single-page application (SPA).",
+        fastapi: "FastAPI: Framework backend async berkinerja tinggi yang mengeksekusi pipeline inferensi AI PyTorch CUDA dan melayani endpoint REST API spasial.",
         python: "Python: Bahasa utama dalam rekayasa data citra satelit, ekstraksi tile spasial, dan pelatihan model Deep Learning.",
+        pytorch: "PyTorch & CUDA: Eksekusi model deep learning EfficientNet-B4 dan Mask R-CNN pada lingkungan GPU terakselerasi untuk segmentasi citra.",
+        gee: "Google Earth Engine: Platform komputasi awan geospasial untuk akuisisi terprogram citra satelit Sentinel-1 SAR dan Sentinel-2 MSI.",
         maskrcnn: "Mask R-CNN: Model Computer Vision yang dilatih untuk segmentasi instans piksel batas genangan air banjir di Maros.",
         cnn: "CNN: Convolutional Neural Network untuk screening dan klasifikasi awal area berpotensi genangan pada citra satelit.",
         leaflet: "Leaflet.js: Engine peta interaktif berbasis web untuk merender poligon banjir di atas tile peta wilayah.",
@@ -240,7 +243,10 @@ const techContextMap = {
         css: "Modern CSS: Handcrafted styling leveraging CSS variables, Flexbox, and CSS Grid for high-performance rendering.",
         vite: "Vite: Modern frontend tooling driving ultra-fast HMR and optimized production bundles.",
         react: "React: Reactive component hierarchy, state lifecycle management, and modern SPA architecture fundamentals.",
+        fastapi: "FastAPI: High-performance asynchronous Python backend serving deep learning inference pipelines and spatial REST APIs with automated OpenAPI documentation.",
         python: "Python: Core language for satellite data wrangling, OpenCV transformations, and deep learning model training.",
+        pytorch: "PyTorch & CUDA: Deep learning framework executing EfficientNet-B4 and Mask R-CNN models on hardware-accelerated GPU pipelines.",
+        gee: "Google Earth Engine: Programmatic cloud acquisition and processing of Sentinel-2 multispectral and Sentinel-1 SAR radar imagery.",
         maskrcnn: "Mask R-CNN: Instance segmentation architecture trained to isolate pixel-level flood inundation boundaries.",
         cnn: "CNN: Convolutional neural networks utilized for initial flood risk categorization across satellite scenes.",
         leaflet: "Leaflet.js: Interactive web mapping library rendering dynamic GeoJSON layers with custom map controls.",
@@ -448,6 +454,29 @@ skillPills.forEach(pill => {
         const map = techContextMap[currentLang] || techContextMap.id;
         if (techHintEl && map[techKey]) {
             techHintEl.innerHTML = `<span class="hint-active-text">${map[techKey]}</span>`;
+        }
+    });
+});
+
+// --- Interactive Project Viewport Switcher ---
+const previewToggleBtns = document.querySelectorAll('.preview-toggle-btn');
+const projectPreviewImg = document.getElementById('project-preview-img');
+
+previewToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const targetImg = btn.getAttribute('data-img');
+        const targetAlt = btn.getAttribute('data-alt');
+
+        previewToggleBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        if (projectPreviewImg && targetImg) {
+            projectPreviewImg.style.opacity = '0.4';
+            setTimeout(() => {
+                projectPreviewImg.setAttribute('src', targetImg);
+                if (targetAlt) projectPreviewImg.setAttribute('alt', targetAlt);
+                projectPreviewImg.style.opacity = '1';
+            }, 120);
         }
     });
 });

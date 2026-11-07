@@ -999,13 +999,61 @@ body.light-mode .tab-button:hover {
 .viewport-media {
     position: relative;
     overflow: hidden;
+    background-color: #0b1120;
+    aspect-ratio: 16 / 10;
 }
 
 .preview-img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     display: block;
+    transition: opacity 0.25s ease;
+}
+
+.viewport-switcher-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    padding: 10px 14px;
+    background-color: var(--bg-surface-elevated);
+    border-top: 1px solid var(--border-subtle);
+}
+
+.preview-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    font-weight: 500;
+    padding: 5px 11px;
+    border-radius: var(--radius-xs);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    font-family: var(--font-body);
+}
+
+.preview-toggle-btn:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-surface);
+}
+
+.preview-toggle-btn.active {
+    color: var(--accent);
+    background-color: var(--accent-subtle);
+    border-color: var(--accent-border);
+    font-weight: 600;
+}
+
+.preview-toggle-btn .switcher-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: currentColor;
+    display: inline-block;
 }
 
 /* Tab 2: AI Pipeline Layout */

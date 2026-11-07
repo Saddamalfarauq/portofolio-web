@@ -108,8 +108,8 @@
                     </h1>
 
                     <p class="hero-description" data-i18n="hero_description">
-                        Menggabungkan rekayasa perangkat lunak modern (JavaScript, OOP, arsitektur RESTful API) dengan
-                        implementasi model Computer Vision (CNN & Mask R-CNN) untuk visualisasi geospasial WebGIS.
+                        Menggabungkan rekayasa perangkat lunak modern (React 19, JavaScript, FastAPI, arsitektur RESTful API) dengan
+                        implementasi model Computer Vision (EfficientNet &amp; Mask R-CNN) untuk visualisasi geospasial WebGIS.
                         Lulusan S1 TI Universitas Bosowa (IPK 3.81 Cum Laude), PMM Awardee di Teknik Informatika ITB,
                         dan tersertifikasi BNSP.
                     </p>
@@ -204,10 +204,9 @@
             <div class="container">
                 <div class="section-title-block">
                     <div class="section-kicker" data-i18n="proj_kicker">PROYEK PILIHAN & RISET REKAYASA</div>
-                    <h2 class="section-heading" data-i18n="proj_heading">Sistem Deteksi Banjir WebGIS Berbasis AI</h2>
+                    <h2 class="section-heading" data-i18n="proj_heading">Sentinel FloodRisk AI • Institutional WebGIS</h2>
                     <p class="section-lead" data-i18n="proj_lead">
-                        Eksplorasi mendalam arsitektur full-stack yang mengintegrasikan model segmentasi piksel citra
-                        satelit ke platform pemetaan web interaktif.
+                        Platform pemetaan risiko banjir otomatis skala institusional Kabupaten Maros berbasis fusi satelit multi-sensor (Sentinel-1 SAR C-Band &amp; Sentinel-2 MSI), cascaded dual-stage deep learning (EfficientNet-B4 + Mask R-CNN ResNet-101 FPN), segmentasi Otsu adaptif, dan validasi Explainable AI (Grad-CAM).
                     </p>
                 </div>
 
@@ -253,26 +252,28 @@
                         <div class="panel-split-layout">
                             <div class="panel-details">
                                 <div class="badge-row">
-                                    <span class="badge-accent" data-i18n="proj_badge_thesis">Tugas Akhir / Skripsi
-                                        S1</span>
-                                    <span class="badge-neutral">WebGIS + Computer Vision</span>
+                                    <span class="badge-accent" data-i18n="proj_badge_thesis">Tugas Akhir S1 Cum Laude · Univ. Bosowa 2026</span>
+                                    <span class="badge-neutral">Sentinel-1 SAR + Sentinel-2 + React 19 + FastAPI</span>
                                 </div>
-                                <h3 class="panel-title" data-i18n="proj_case_title">WebGIS Flood Detection System —
-                                    Kabupaten Maros</h3>
+                                <h3 class="panel-title" data-i18n="proj_case_title">Sentinel FloodRisk AI — Sistem WebGIS Deteksi & Pemetaan Risiko Banjir Kabupaten Maros</h3>
                                 <p class="panel-text" data-i18n="proj_case_summary">
-                                    Sistem informasi geospasial berbasis web untuk memetakan dan mendeteksi sebaran area
-                                    tergenang banjir secara presisi di Kabupaten Maros. Menggabungkan klasifikasi citra
-                                    satelit dan segmentasi semantik Mask R-CNN yang dirender ke layer poligon interaktif
-                                    peta Leaflet.
+                                    Sistem informasi geospasial end-to-end yang memetakan genangan banjir secara presisi di 14 kecamatan Kabupaten Maros. Memadukan radar penembus awan Sentinel-1 SAR (hamburan balik specular &lt; -14 dB) dengan citra optik Sentinel-2 (NDWI/NDVI) dan elevasi DEM SRTM 30m. Menggerakkan pipeline deep learning dua tahap untuk mendeteksi 29 zona genangan seluas 13.279,8 Ha pada benchmark banjir historis Januari 2023.
                                 </p>
 
                                 <div class="tech-spec-chips">
-                                    <span class="spec-chip">JavaScript (ES6+)</span>
-                                    <span class="spec-chip">Python</span>
-                                    <span class="spec-chip">Mask R-CNN</span>
-                                    <span class="spec-chip">CNN</span>
+                                    <span class="spec-chip">React 19</span>
                                     <span class="spec-chip">Leaflet.js</span>
-                                    <span class="spec-chip">GeoJSON</span>
+                                    <span class="spec-chip">FastAPI</span>
+                                    <span class="spec-chip">PyTorch (CUDA)</span>
+                                    <span class="spec-chip">Sentinel-1 SAR</span>
+                                    <span class="spec-chip">Sentinel-2 MSI</span>
+                                    <span class="spec-chip">Mask R-CNN</span>
+                                    <span class="spec-chip">EfficientNet-B4</span>
+                                    <span class="spec-chip">Adaptive Otsu</span>
+                                    <span class="spec-chip">Grad-CAM (XAI)</span>
+                                    <span class="spec-chip">Google Earth Engine</span>
+                                    <span class="spec-chip">GeoJSON (WGS84)</span>
+                                    <span class="spec-chip">Tailwind CSS</span>
                                     <span class="spec-chip">Vercel</span>
                                 </div>
 
@@ -280,26 +281,22 @@
                                     <li>
                                         <span class="deliverable-check">✓</span>
                                         <div class="deliverable-text">
-                                            <strong data-i18n="proj_deliv1_title">Segmentasi Instance Presisi:</strong>
-                                            <span data-i18n="proj_deliv1_desc">Deteksi batas piksel genangan air dari
-                                                citra satelit resolusi spasial tinggi.</span>
+                                            <strong data-i18n="proj_deliv1_title">Delineasi Spasial 29 Zona Banjir (13.279 Ha):</strong>
+                                            <span data-i18n="proj_deliv1_desc">Segmentasi poligon genangan presisi piksel berbasis Mask R-CNN dan ambang batas Otsu adaptif pada skenario bencana Januari 2023.</span>
                                         </div>
                                     </li>
                                     <li>
                                         <span class="deliverable-check">✓</span>
                                         <div class="deliverable-text">
-                                            <strong data-i18n="proj_deliv2_title">Vektorisasi Geospasial
-                                                Dinamis:</strong>
-                                            <span data-i18n="proj_deliv2_desc">Konversi otomatis mask hasil prediksi AI
-                                                menjadi format GeoJSON poligon siap peta.</span>
+                                            <strong data-i18n="proj_deliv2_title">Fusi Multi-Sensor 9-Kanal & SAR Tembus Awan:</strong>
+                                            <span data-i18n="proj_deliv2_desc">Mengatasi kendala tutupan awan musim hujan tropis melalui fusi saluran optik (B2, B3, B4, B8, NDWI, NDVI), radar Sentinel-1 SAR (VV/VH), dan topografi DEM SRTM 30m.</span>
                                         </div>
                                     </li>
                                     <li>
                                         <span class="deliverable-check">✓</span>
                                         <div class="deliverable-text">
-                                            <strong data-i18n="proj_deliv3_title">UI Monitoring Responsif:</strong>
-                                            <span data-i18n="proj_deliv3_desc">Antarmuka peta ramah pengguna untuk
-                                                mitigasi dan pemantauan cepat tanggap bencana.</span>
+                                            <strong data-i18n="proj_deliv3_title">Filter 14 Kecamatan & Interoperabilitas GIS:</strong>
+                                            <span data-i18n="proj_deliv3_desc">Filter granular wilayah, matriks rekapitulasi risiko standar BNPB, dan ekspor 1-klik format GeoJSON standar WGS84 siap pakai di QGIS, ArcGIS Pro, atau posko BPBD.</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -344,9 +341,20 @@
                                         </a>
                                     </div>
                                     <div class="viewport-media">
-                                        <img src="/assets/webgis-screenshot.png"
-                                            alt="Tangkapan layar antarmuka WebGIS Sistem Deteksi Banjir Maros"
-                                            class="preview-img" width="960" height="600" loading="lazy">
+                                        <img id="project-preview-img" src="/assets/webgis-screenshot.jpg"
+                                            alt="Peta Spasial Delineasi 29 Zona Banjir Kabupaten Maros"
+                                            class="preview-img" width="1920" height="1080" loading="lazy">
+                                    </div>
+                                    <div class="viewport-switcher-bar" role="tablist" aria-label="Pilihan Tampilan WebGIS">
+                                        <button type="button" class="preview-toggle-btn active" data-img="/assets/webgis-screenshot.jpg" data-alt="Peta Spasial Delineasi 29 Zona Banjir Kabupaten Maros">
+                                            <span class="switcher-dot"></span> Peta 29 Zona (13.280 Ha)
+                                        </button>
+                                        <button type="button" class="preview-toggle-btn" data-img="/assets/webgis-district.jpg" data-alt="Filter Granular Administrasi Kecamatan Bontoa">
+                                            <span class="switcher-dot"></span> Filter Kecamatan
+                                        </button>
+                                        <button type="button" class="preview-toggle-btn" data-img="/assets/webgis-xai.jpg" data-alt="Panel Validasi Ilmiah Explainable AI Grad-CAM">
+                                            <span class="switcher-dot"></span> Validasi XAI (Grad-CAM)
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -368,56 +376,51 @@
                                 <!-- Step 1 -->
                                 <div class="step-card">
                                     <div class="step-badge">Tahap 01</div>
-                                    <h4 class="step-title" data-i18n="step1_title">Citra Satelit & Preprocessing</h4>
+                                    <h4 class="step-title" data-i18n="step1_title">Ingesti Multi-Sensor 9-Kanal (GEE API)</h4>
                                     <p class="step-desc" data-i18n="step1_desc">
-                                        Ekstraksi citra satelit area Kabupaten Maros. Normalisasi kontras, pembagian
-                                        petak koordinat spasial, dan augmentasi data pelatihan.
+                                        Ekstraksi citra satelit mentah real-time via Google Earth Engine API: 4 kanal optik Sentinel-2 (B02, B03, B04, B08), 2 indeks spektral (NDWI & NDVI), 2 kanal radar Sentinel-1 SAR C-Band (VV & VH), dan model elevasi digital SRTM 30m.
                                     </p>
-                                    <span class="step-tech">Python · OpenCV · GDAL</span>
+                                    <span class="step-tech">Python · GEE API · Sentinel Hub · GDAL</span>
                                 </div>
 
                                 <!-- Step 2 -->
                                 <div class="step-card">
                                     <div class="step-badge">Tahap 02</div>
-                                    <h4 class="step-title" data-i18n="step2_title">Klasifikasi Awal (CNN)</h4>
+                                    <h4 class="step-title" data-i18n="step2_title">Macro Screening — CNN (EfficientNet-B4)</h4>
                                     <p class="step-desc" data-i18n="step2_desc">
-                                        Model CNN menyaring dan mengelompokkan area yang memiliki karakteristik genangan
-                                        air tinggi untuk efisiensi beban komputasi.
+                                        Penyaring cepat (Gatekeeper) yang mengklasifikasikan tingkat risiko regional (Rendah, Sedang, Tinggi, Sangat Tinggi) dengan akurasi validasi 79,59%, mengoptimalkan efisiensi komputasi inferensi GPU.
                                     </p>
-                                    <span class="step-tech">TensorFlow · CNN Architecture</span>
+                                    <span class="step-tech">PyTorch · EfficientNet-B4 · CUDA</span>
                                 </div>
 
                                 <!-- Step 3 -->
                                 <div class="step-card highlight">
                                     <div class="step-badge">Tahap 03</div>
-                                    <h4 class="step-title" data-i18n="step3_title">Segmentasi Presisi (Mask R-CNN)</h4>
+                                    <h4 class="step-title" data-i18n="step3_title">Micro Delineation — Mask R-CNN (ResNet-101 FPN)</h4>
                                     <p class="step-desc" data-i18n="step3_desc">
-                                        Menghasilkan mask segmentasi tingkat piksel untuk mengisolasi batas genangan
-                                        banjir dari objek daratan lainnya secara akurat.
+                                        Segmentasi instans tingkat piksel dengan modifikasi extreme anchor ratios [0.2, 0.5, 1.0, 2.0, 5.0] untuk menangkap pola meliuk aliran sungai dan genangan persawahan datar Maros.
                                     </p>
-                                    <span class="step-tech">Mask R-CNN · ResNet Backbone</span>
+                                    <span class="step-tech">Mask R-CNN · ResNet-101 FPN · Anchor Ratios</span>
                                 </div>
 
                                 <!-- Step 4 -->
                                 <div class="step-card">
                                     <div class="step-badge">Tahap 04</div>
-                                    <h4 class="step-title" data-i18n="step4_title">Vektorisasi ke GeoJSON</h4>
+                                    <h4 class="step-title" data-i18n="step4_title">Segmentasi Otsu Adaptif & Vektorisasi GeoJSON</h4>
                                     <p class="step-desc" data-i18n="step4_desc">
-                                        Mask piksel biner dikonversi menjadi poligon vektor berstandar GeoJSON dengan
-                                        referensi koordinat geografis nyata (WGS84).
+                                        Penyempurnaan batas air dengan ambang batas Otsu morfologis pada komposit SAR/NDWI, diikuti konversi otomatis mask biner menjadi poligon vektor standar GeoJSON (WGS84).
                                     </p>
-                                    <span class="step-tech">Shapely · GeoJSON Parser</span>
+                                    <span class="step-tech">Adaptive Otsu · Shapely · GeoJSON Parser</span>
                                 </div>
 
                                 <!-- Step 5 -->
                                 <div class="step-card">
                                     <div class="step-badge">Tahap 05</div>
-                                    <h4 class="step-title" data-i18n="step5_title">Visualisasi WebGIS Interaktif</h4>
+                                    <h4 class="step-title" data-i18n="step5_title">Visualisasi WebGIS, XAI (Grad-CAM) & Integrasi Cloud</h4>
                                     <p class="step-desc" data-i18n="step5_desc">
-                                        Lapisan GeoJSON dirender dinamis di atas antarmuka peta Leaflet.js dengan
-                                        kontrol interaktif, tooltip wilayah, dan level kedalaman.
+                                        Penyajian interaktif di peta Leaflet.js dengan kontrol 14 kecamatan, visualisasi transparansi Explainable AI (Grad-CAM), serta orkestrasi backend FastAPI via tunnel terenkripsi ke deployment Vercel.
                                     </p>
-                                    <span class="step-tech">JavaScript · Leaflet.js · Vite</span>
+                                    <span class="step-tech">React 19 · Leaflet · FastAPI · Grad-CAM · Vercel</span>
                                 </div>
                             </div>
                         </div>
@@ -435,12 +438,9 @@
                                         <circle cx="12" cy="12" r="2"></circle>
                                     </svg>
                                 </div>
-                                <h4 class="spec-title" data-i18n="spec1_title">Latar Belakang & Masalah</h4>
+                                <h4 class="spec-title" data-i18n="spec1_title">Kerentanan Hidrologi Dataran Maros</h4>
                                 <p class="spec-desc" data-i18n="spec1_desc">
-                                    Kabupaten Maros memiliki kerentanan musiman tinggi terhadap banjir. Pemantauan
-                                    manual sering lambat dan berisiko. Proyek ini memvalidasi apakah Deep Learning
-                                    otomatis dapat memetakan genangan secara akurat untuk mendukung pengambilan
-                                    keputusan tanggap darurat.
+                                    Kabupaten Maros memiliki dataran rendah barat (&lt;10 mdpl) yang merupakan muara DAS utama dan penampung air gravitasi, rawan banjir musiman parah. Sistem ini menghadirkan early warning otomatis tanpa ketergantungan pada survei manual lapangan yang berisiko lambat.
                                 </p>
                             </div>
 
@@ -453,11 +453,9 @@
                                         <polyline points="2 12 12 17 22 12"></polyline>
                                     </svg>
                                 </div>
-                                <h4 class="spec-title" data-i18n="spec2_title">Tantangan Rekayasa Teknis</h4>
+                                <h4 class="spec-title" data-i18n="spec2_title">Terobosan Radar Tembus Awan (SAR Specular Reflection)</h4>
                                 <p class="spec-desc" data-i18n="spec2_desc">
-                                    Citra satelit tropis memiliki gangguan tutupan awan, pantulan kanopi pohon lebat,
-                                    dan variasi warna tanah basah yang rawan memicu <em>false-positive</em>. Diperlukan
-                                    penyesuaian threshold kanal spektral dan augmentasi dataset spesifik wilayah Maros.
+                                    Musim hujan tropis menghasilkan tutupan awan tebal yang membutakan satelit optik biasa. Diatasi dengan gelombang mikro Sentinel-1 SAR C-Band (~5.6 cm) bebas bias awan, di mana permukaan air memantulkan sinyal menjauhi sensor (specular reflection &lt; -14 dB).
                                 </p>
                             </div>
 
@@ -471,9 +469,7 @@
                                 </div>
                                 <h4 class="spec-title" data-i18n="spec3_title">Hasil & Nilai Tambah</h4>
                                 <p class="spec-desc" data-i18n="spec3_desc">
-                                    Model Mask R-CNN mampu memisahkan area tergenang dengan presisi tinggi dan
-                                    menghasilkan poligon yang siap disajikan secara instan di peta web tanpa perlu
-                                    instalasi software GIS desktop yang rumit.
+                                    Model mencapai Mean IoU 0.862, Precision 0.914, dan Dice Score 0.905. Panel atensi Grad-CAM membuktikan bahwa model mengenali fisik hamburan balik radar dan topografi dataran rendah secara akurat, bukan sekadar menebak noise latar belakang.
                                 </p>
                             </div>
                         </div>
@@ -627,12 +623,13 @@
                         </div>
                         <ul class="skills-list">
                             <li class="skill-pill" data-tech="javascript">JavaScript (ES6+)</li>
-                            <li class="skill-pill" data-tech="rest">RESTful APIs & Fetch</li>
-                            <li class="skill-pill" data-tech="oop">OOP & Algoritma Dasar</li>
+                            <li class="skill-pill" data-tech="react">React 19</li>
+                            <li class="skill-pill" data-tech="fastapi">FastAPI (Python)</li>
+                            <li class="skill-pill" data-tech="rest">RESTful APIs &amp; Fetch</li>
+                            <li class="skill-pill" data-tech="oop">OOP &amp; Algoritma Dasar</li>
                             <li class="skill-pill" data-tech="html">HTML5 Semantic</li>
                             <li class="skill-pill" data-tech="css">Modern CSS (Grid/Flexbox)</li>
-                            <li class="skill-pill" data-tech="vite">Vite & NPM Tooling</li>
-                            <li class="skill-pill" data-tech="react">React Fundamentals</li>
+                            <li class="skill-pill" data-tech="vite">Vite &amp; NPM Tooling</li>
                         </ul>
                     </div>
 
@@ -657,11 +654,13 @@
                         </div>
                         <ul class="skills-list">
                             <li class="skill-pill" data-tech="python">Python</li>
+                            <li class="skill-pill" data-tech="pytorch">PyTorch (CUDA)</li>
                             <li class="skill-pill" data-tech="maskrcnn">Mask R-CNN (Segmentation)</li>
-                            <li class="skill-pill" data-tech="cnn">Deep Learning (CNN)</li>
-                            <li class="skill-pill" data-tech="leaflet">Leaflet.js & WebGIS</li>
+                            <li class="skill-pill" data-tech="cnn">CNN (EfficientNet-B4)</li>
+                            <li class="skill-pill" data-tech="leaflet">Leaflet.js &amp; WebGIS</li>
+                            <li class="skill-pill" data-tech="gee">Google Earth Engine</li>
                             <li class="skill-pill" data-tech="geojson">GeoJSON Data Structure</li>
-                            <li class="skill-pill" data-tech="satellite">Analisis Citra Satelit</li>
+                            <li class="skill-pill" data-tech="satellite">Analisis Citra Satelit (SAR &amp; MSI)</li>
                             <li class="skill-pill" data-tech="sql">Basis Data Relasional (SQL)</li>
                         </ul>
                     </div>
